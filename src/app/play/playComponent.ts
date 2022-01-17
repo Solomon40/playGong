@@ -2,9 +2,15 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'pg-play',
-    template: './playComponent.html',
+    templateUrl: './playComponent.html',
     styleUrls: ['./playComponent.css']
 })
-export class PressPlay {
+export class PlayComponent {
+  title: string = "Press Play";
+  audioObj = new Audio('./Gong-sound.mp3');
 
+  playSound(): void{
+    this.audioObj.play();
+    console.log("still plays");
+  }
 }
